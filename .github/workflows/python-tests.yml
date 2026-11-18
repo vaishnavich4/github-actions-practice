@@ -26,3 +26,11 @@ jobs:
 
       - name: Run automated tests
         run: pytest
+
+  build:
+    runs-on: ubuntu-latest
+    needs: test
+
+    steps:
+      - name: Build application
+        run: echo "Application build completed!"
