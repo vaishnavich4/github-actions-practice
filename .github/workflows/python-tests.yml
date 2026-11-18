@@ -8,6 +8,9 @@ on:
     branches:
       - main
 
+env:
+  APP_NAME: ShoppingApp
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -26,6 +29,9 @@ jobs:
 
       - name: Run automated tests
         run: pytest
+
+      - name: Display application name
+        run: echo "Application name is $APP_NAME"
 
   build:
     runs-on: ubuntu-latest
